@@ -16,7 +16,7 @@ const PopularPosts = () => {
                     style={{ width: 50 }}
                 />
                 <span className="w3-large">Lorem</span>
-                <br />
+                {/*<br />*/}
                 <span>Sed mattis nunc</span>
             </li>
             <li className="w3-padding-16">

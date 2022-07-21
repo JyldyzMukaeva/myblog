@@ -1,6 +1,7 @@
 import React from "react";
 import {tags} from "../constants";
 
+
 const margin = {
     marginRight: "5px"
 }
@@ -31,3 +32,4 @@ const Tags = () => {
     )
 }
 export default Tags;
+

@@ -16,6 +16,7 @@ function App() {
             <BlogEntries/>
             {/*<State/>*/}
             <IntroductionMenu/>
+
         </div>
           <Footer/>
       </div>

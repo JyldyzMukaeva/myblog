@@ -1,19 +1,20 @@
 import React from 'react';
+import {Link, NavLink} from "react-router-dom";
 import styles from "./Header.module.css"
 
 const Header = () => {
+
+    const setActive = ({isActive}) => isActive ? styles.active : "";
+
     return (
         <div className={styles.header}>
             <ul>
-                <li><a href="/">Главная</a></li>
-                <li><a href="/about">О нас</a></li>
-                <li><a href="/contacts">Контакты</a></li>
-                <li><a href="/address">Адрес</a></li>
-                {/*<li><a href="/products">Продукты</a></li>*/}
-                <li><a href="/catalog/iphone">Iphone</a></li>
-                <li><a href="/catalog/MacBook">MacBook</a></li>
-
-
+                <li><NavLink className={setActive} to="/">Главная</NavLink></li>
+                <li><NavLink  className={setActive} to="/about">О нас</NavLink></li>
+                <li><NavLink  className={setActive} to="/contacts">Контакты</NavLink></li>
+                <li><NavLink  className={setActive} to="/catalog">Каталог</NavLink></li>
+                <li><NavLink  className={setActive} to="/catalog/iphone">Iphone</NavLink></li>
+                <li><NavLink  className={setActive} to="/catalog/macBook">MacBook</NavLink></li>
             </ul>
         </div>
     );

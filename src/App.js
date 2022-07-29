@@ -14,18 +14,19 @@ import MacBook from "./pages/MacBook/MacBook";
 function App() {
   return (
       <>
-        <Header/>
+
         <BrowserRouter>
+            <Header/>
             <Routes>
                 <Route path="/" element={<Main pageName="Главная страница"/>}/>
                 <Route path="/about" element={<About text="Здесь должна быть информация о нас"/>}/>
                 <Route path="/contacts" element={<Contacts text="Контакты пользователей"/>}/>
                 <Route path="/address" element={<Address/>}/>
-
-                    <Route path="/catalog" element={<Catalog/>}>  path="iphone" element={<Iphone/>}/>
+                <Route path="/catalog" element={<Catalog/>}>
+                    <Route path="iphone" element={<Iphone/>}/>
                     <Route path="macBook" element={<MacBook/>}/>
-
                 </Route>
+                {/*<Route path="/menu" element={<Menu/>}/>*/}
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
@@ -33,8 +34,6 @@ function App() {
   );
 }
 
-// localhost:3000/catalog - Catalog
-// localhost:3000/catalog/iphone - Iphone
-// localhost:3000/catalog/macBook - MacBook
+
 
 export default App;

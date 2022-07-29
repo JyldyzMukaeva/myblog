@@ -6,7 +6,6 @@ import Main from "./pages/Main/Main";
 import About from "./pages/About/About";
 import Contacts from "./pages/Contacts/Contacts"
 import Address from "./pages/Address/Address";
-// import Products from "./pages/Products/Products";
 import NotFound from "./pages/NotFound/NotFound";
 import Catalog from "./pages/Catalog/Catalog";
 import Iphone from "./pages/Iphone/Iphone";
@@ -23,8 +22,7 @@ function App() {
                 <Route path="/contacts" element={<Contacts text="Контакты пользователей"/>}/>
                 <Route path="/address" element={<Address/>}/>
 
-                <Route path="/catalog" element={<Catalog/>}>
-                    <Route path="iphone" element={<Iphone/>}/>
+                    <Route path="/catalog" element={<Catalog/>}>  path="iphone" element={<Iphone/>}/>
                     <Route path="macBook" element={<MacBook/>}/>
 
                 </Route>

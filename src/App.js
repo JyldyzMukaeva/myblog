@@ -27,6 +27,7 @@ function App() {
                     <Route path="macBook" element={<MacBook/>}/>
                 </Route>
                 {/*<Route path="/menu" element={<Menu/>}/>*/}
+                {/*zzz*/}
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>

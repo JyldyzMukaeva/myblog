@@ -36,6 +36,6 @@ function App() {
   );
 }
 
-
-
+// localhost:3000/product/5
+// localhost:3000/product/iphone
 export default App;

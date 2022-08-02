@@ -1,4 +1,4 @@
-export const iphones =  [
+export const iphone =  [
     {
         id: 1,
         price: "99450 сом",

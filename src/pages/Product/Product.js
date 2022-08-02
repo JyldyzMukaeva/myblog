@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
-import {iphones} from "../../constants/iphones";
+import {iphone} from "../../constants/iphone";
 import styles from "./Product.module.css";
 
 const title = {
@@ -8,7 +8,8 @@ const title = {
 }
 const Product = () => {
     const params = useParams();
-    const product = iphones.find(item => item.id === +params.id)
+    const product = iphone.find(item => item._id === +params.id)
+
 
 
     return (

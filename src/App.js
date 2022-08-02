@@ -27,7 +27,7 @@ function App() {
                     <Route path="iphone" element={<Iphone/>}/>
                     <Route path="macBook" element={<MacBook/>}/>
                 </Route>
-                <Route path="/product/:name" element={<Product/>}/>
+                <Route path="/product/:id" element={<Product/>}/>
                 {/*<Route path="/menu" element={<Menu/>}/>*/}
                 <Route path="*" element={<NotFound/>}/>
             </Routes>

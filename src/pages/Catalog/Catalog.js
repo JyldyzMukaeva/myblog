@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Outlet} from "react-router-dom";
+import styles from "./Catalog.module.css";
 
 
 const Catalog = () => {
@@ -8,16 +8,19 @@ const Catalog = () => {
         textAlign:"center"
     }
     return (
-        <div>
+        <>
             <h1 style={title}>Catalog</h1>
-            <ul>
-                <li><Link to="/product/iphone-13-pro">Iphone 13 pro</Link></li>
-                <li><Link to="/product/iphone-13-pro-max">Iphone 13 pro max</Link></li>
-                <li><Link to="/product/iphone-13">Iphone 13</Link></li>
-                <li><Link to="/product/iphone-12">Iphone 12</Link></li>
-            </ul>
-            <Outlet/>
-        </div>
+            <div className={styles.container}>
+               <div className={styles.catalog_card}>
+                   <img src="https://istore.kg/media/category/macs_GvfhGiG.webp" alt=""/>
+                   <h2>Mac</h2>
+               </div> 
+                <div className={styles.catalog_card}>
+                    <img src="https://istore.kg/media/category/watches.webp" alt=""/>
+                    <h2>Watch</h2>
+                </div>
+            </div>
+        </>
     );
 };
 

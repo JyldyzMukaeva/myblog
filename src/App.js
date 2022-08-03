@@ -14,7 +14,7 @@ import Product from "./pages/Product/Product";
 
 function App() {
   return (
-      <>
+
 
         <BrowserRouter>
             <Header/>
@@ -23,19 +23,21 @@ function App() {
                 <Route path="/about" element={<About text="Здесь должна быть информация о нас"/>}/>
                 <Route path="/contacts" element={<Contacts text="Контакты пользователей"/>}/>
                 <Route path="/address" element={<Address/>}/>
-                <Route path="/catalog" element={<Catalog/>}>
-                    <Route path="iphone" element={<Iphone/>}/>
-                    <Route path="macBook" element={<MacBook/>}/>
-                </Route>
+                <Route path="/catalog" element={<Catalog/>}/>
+                <Route path="/catalog/macBook" element={<MacBook/>}/>
+                <Route path="/catalog/iphone" element={<Iphone/>}/>
                 <Route path="/product/:id" element={<Product/>}/>
-                {/*<Route path="/menu" element={<Menu/>}/>*/}
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
-      </>
+
   );
 }
 
 // localhost:3000/product/5
 // localhost:3000/product/iphone
+
+// localhost:3000/product - NotFound
+// localhost:3000/product/1 - Product
+
 export default App;

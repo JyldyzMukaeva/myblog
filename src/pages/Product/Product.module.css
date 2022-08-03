@@ -14,3 +14,11 @@
 .info{
     margin-top: 70px;
 }
+
+.quantity_status{
+    display: inline;
+    border-radius: 30px;
+    background-color: red;
+    padding: 5px 10px;
+    color: white;
+}

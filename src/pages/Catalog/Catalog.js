@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./Catalog.module.css";
+import {NavLink} from "react-router-dom";
 
 
 const Catalog = () => {
@@ -12,8 +13,10 @@ const Catalog = () => {
             <h1 style={title}>Catalog</h1>
             <div className={styles.container}>
                <div className={styles.catalog_card}>
-                   <img src="https://istore.kg/media/category/macs_GvfhGiG.webp" alt=""/>
-                   <h2>Mac</h2>
+                   <NavLink to="/catalog/iphone">
+                   <img src="https://istore.kg/media/category/iphones.webp" alt=""/>
+                   <h2>Iphone</h2>
+                   </NavLink>
                </div> 
                 <div className={styles.catalog_card}>
                     <img src="https://istore.kg/media/category/watches.webp" alt=""/>

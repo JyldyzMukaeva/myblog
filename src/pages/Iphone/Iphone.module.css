@@ -1,0 +1,13 @@
+.iphones{
+    display: flex;
+    justify-content: center;
+
+}
+
+.iphone{
+    width: 300px;
+}
+
+.iphone img{
+    width: 100%;
+}

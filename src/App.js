@@ -11,6 +11,8 @@ import Catalog from "./pages/Catalog/Catalog";
 import Iphone from "./pages/Iphone/Iphone";
 import MacBook from "./pages/MacBook/MacBook";
 import Product from "./pages/Product/Product";
+import Watch from "./pages/IwatchCard/Iwatch";
+import Goods from "./pages/Goods/Goods";
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
                 <Route path="/catalog" element={<Catalog/>}/>
                 <Route path="/catalog/macBook" element={<MacBook/>}/>
                 <Route path="/catalog/iphone" element={<Iphone/>}/>
+                <Route path="/catalog/watch" element={<Watch/>}/>
                 <Route path="/product/:id" element={<Product/>}/>
+                <Route path="/goods/:id" element={<Goods/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>

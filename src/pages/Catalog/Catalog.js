@@ -19,8 +19,10 @@ const Catalog = () => {
                    </NavLink>
                </div> 
                 <div className={styles.catalog_card}>
+                    <NavLink to="/catalog/watch">
                     <img src="https://istore.kg/media/category/watches.webp" alt=""/>
                     <h2>Watch</h2>
+                    </NavLink>
                 </div>
             </div>
         </>

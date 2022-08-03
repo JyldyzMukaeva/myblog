@@ -1,0 +1,31 @@
+/*.watch{*/
+/*    width: 100vw;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    background-color: white;*/
+/*}*/
+
+/*.watch{*/
+/*    !*display: grid;*!*/
+/*    !*justify-items: center;*!*/
+/*    width: 250px;*/
+/*    margin: 0 40px;*/
+/*}*/
+/*.watch img{*/
+/*    width: 100%;*/
+/*}*/
+
+.watches{
+    display: flex;
+    justify-content: center;
+
+}
+
+.watch{
+    margin-right: 10px;
+    width: 300px;
+}
+
+.watch img{
+    width: 100%;
+}

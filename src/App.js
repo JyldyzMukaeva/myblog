@@ -22,7 +22,7 @@ function App() {
             <Header/>
             <Routes>
                 <Route path="/" element={<Main pageName="Главная страница"/>}/>
-                <Route path="/about" element={<About text="Здесь должна быть информация о нас"/>}/>
+                <Route path="/about" element={<About/>}/>
                 <Route path="/contacts" element={<Contacts text="Контакты пользователей"/>}/>
                 <Route path="/address" element={<Address/>}/>
                 <Route path="/catalog" element={<Catalog/>}/>

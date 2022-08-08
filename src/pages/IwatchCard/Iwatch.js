@@ -1,9 +1,24 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import style from "./Iwatch.module.css";
 import {watch} from "../../constants/iwatch";
 import {NavLink} from "react-router-dom";
 
 const Watch = () => {
+
+    const [watch, setWatch] = useState([])
+
+    useEffect(() => {
+        fetch("http://localhost:3001/watch")
+            .then(response => {
+                if (response.status === 200){
+                    return response.json();
+                } else {
+                    alert("Произошла ошибка. Статус ошибки: " + response.status);
+                }
+            })
+            .then(data => setWatch(data))
+    }, [])
+
     return (
         <div className={style.watches}>
             {

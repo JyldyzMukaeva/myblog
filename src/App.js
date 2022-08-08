@@ -1,5 +1,6 @@
 import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {Toaster} from "react-hot-toast";
 import './App.css';
 import Header from "./components/Header/Header";
 import Main from "./pages/Main/Main";
@@ -13,6 +14,7 @@ import MacBook from "./pages/MacBook/MacBook";
 import Product from "./pages/Product/Product";
 import Watch from "./pages/IwatchCard/Iwatch";
 import Goods from "./pages/Goods/Goods";
+import Products from "./pages/Admin/Products/Products";
 
 function App() {
   return (
@@ -30,9 +32,11 @@ function App() {
                 <Route path="/catalog/iphone" element={<Iphone/>}/>
                 <Route path="/catalog/watch" element={<Watch/>}/>
                 <Route path="/product/:id" element={<Product/>}/>
+                <Route path="/admin/add-products" element={<Products/>}/>
                 <Route path="/goods/:id" element={<Goods/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
+            <Toaster/>
         </BrowserRouter>
 
   );

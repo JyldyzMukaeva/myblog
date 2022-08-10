@@ -15,6 +15,9 @@ import Product from "./pages/Product/Product";
 import Watch from "./pages/IwatchCard/Iwatch";
 import Goods from "./pages/Goods/Goods";
 import Products from "./pages/Admin/Products/Products";
+import IphoneAdmin from "./pages/Admin/IphoneAdmin/IphoneAdmin";
+import UpdateProduct from "./pages/Admin/UpdateProduct/UpdateProduct";
+
 
 function App() {
   return (
@@ -33,6 +36,8 @@ function App() {
                 <Route path="/catalog/watch" element={<Watch/>}/>
                 <Route path="/product/:id" element={<Product/>}/>
                 <Route path="/admin/add-products" element={<Products/>}/>
+                <Route path="/admin/iphone" element={<IphoneAdmin/>}/>
+                <Route path="/admin/update-product/:id" element={<UpdateProduct/>}/>
                 <Route path="/goods/:id" element={<Goods/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>

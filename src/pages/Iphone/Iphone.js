@@ -24,10 +24,19 @@ const Iphone = () => {
             .then (data => setIphones(data))
     }
 
+    const getProduct = (data) => {
+        const id = data.id;
+        let cart = JSON.parse(localStorage.getItem("cart")) ||  {};
+        cart[id] = {...data, count: 1};
+        localStorage.setItem("cart", JSON.stringify(cart))
+        console.log(cart)
+    }
+
+
+
     useEffect(() => {
         getIphones();
-    },
-        []);
+    },[]);
 
 
 
@@ -51,11 +60,11 @@ const Iphone = () => {
                 {
                     iphone.map(item => {
                         return (
-                            <div className="product_card">
+                            <div key={item.id} className="product_card">
                                 <img src={item.img}/>
                                 <h3>{item.name}</h3>
                                 <h4>{item.price}</h4>
-                                <button>Buy</button>
+                                <button onClick={() => getProduct(item)}>Buy</button>
                             </div>
                         )
                     })

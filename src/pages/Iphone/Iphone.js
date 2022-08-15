@@ -63,7 +63,7 @@ const Iphone = () => {
                             <div key={item.id} className="product_card">
                                 <img src={item.img}/>
                                 <h3>{item.name}</h3>
-                                <h4>{item.price}</h4>
+                                <h4>{item.price} {item.currency}</h4>
                                 <button onClick={() => getProduct(item)}>Buy</button>
                             </div>
                         )

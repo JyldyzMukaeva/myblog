@@ -1,0 +1,46 @@
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.table{
+    width: 100%;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    border-top: 5px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-collapse: collapse;
+    outline: 3px solid #ffd300;
+    font-size: 15px;
+    background: #fff;
+}
+
+.table td{
+    padding: 7px;
+    border: none;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    font-size:15px;
+}
+
+.table tr:nth-child(even){
+    background: #f8f8f8;
+}
+
+.table img{
+    height: 200px;
+    width: 200px;
+}
+
+.table tr:nth-child(1){
+    background-color: lightpink;
+}
+button{
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-color: lightpink;
+    border: none;
+    padding: 10px;
+}

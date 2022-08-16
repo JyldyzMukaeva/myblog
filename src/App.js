@@ -18,6 +18,7 @@ import Products from "./pages/Admin/Products/Products";
 import IphoneAdmin from "./pages/Admin/IphoneAdmin/IphoneAdmin";
 import UpdateProduct from "./pages/Admin/UpdateProduct/UpdateProduct";
 import Cart from "./pages/Cart/Cart";
+import Checkout from "./pages/Checkout/Checkout";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/catalog/watch" element={<Watch/>}/>
                 <Route path="/product/:id" element={<Product/>}/>
                 <Route path="/cart" element={<Cart/>}/>
+                <Route path="/checkout" element={<Checkout/>}/>
                 <Route path="/admin/add-products" element={<Products/>}/>
                 <Route path="/admin/iphone" element={<IphoneAdmin/>}/>
                 <Route path="/admin/update-product/:id" element={<UpdateProduct/>}/>

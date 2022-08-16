@@ -1,21 +1,36 @@
-    import React, {useEffect, useState} from 'react';
-    import s from "./Cart.module.css";
+import React, {useEffect, useState} from 'react';
+import {Link} from "react-router-dom";
+import s from "./Cart.module.css";
 
     const Cart = () => {
         const [goods, setGoods] = useState([])
-        const getProducts = () => {
-            const goods = JSON.parse(localStorage.getItem("cart"));
-            setGoods(Object.values(goods))
-        }
 
-        const changeCount = (e,data) => {
+        /******************* Обработчики ********************/
+
+            const changeCount = (e,data) => {
             const goods = JSON.parse(localStorage.getItem("cart"));
             goods[data.id].count = +e.currentTarget.value;
             localStorage.setItem("cart", JSON.stringify(goods));
             getProducts();
         }
 
-        let sum = goods.reduce((prev, item) => {return prev + (item.count * item.price)},0)
+        /*************************** -----------------*********************/
+
+        const getTotalSum = () => {
+            return goods.reduce((sum, item) => {
+                if(item.currency === "$"){
+                    return sum + (item.count * (item.price *85));
+                }
+                return sum + (item.count * item.price);
+            }, 0)
+        }
+
+        // let sum = goods.reduce((prev, item) => {return prev + (item.count * item.price)},0)
+
+        const getProducts = () => {
+            const goods = JSON.parse(localStorage.getItem("cart"));
+            setGoods(Object.values(goods))
+        }
 
         useEffect(getProducts, []);
         return (
@@ -44,18 +59,23 @@
                             )
                         })
                     }
-                    <tr>
-                        <td colSpan="3"></td>
-                        <td>Итого:</td>
-                        <td>{sum}</td>
-                    </tr>
-                    <tr>
-                        <td colSpan="4"></td>
-                        <td colSpan={2}><button>Оформить заказ</button></td>
-
-                    </tr>
+                    {/*<tr>*/}
+                    {/*    <td colSpan="3"></td>*/}
+                    {/*    <td>Итого:</td>*/}
+                    {/*    <td>{sum}</td>*/}
+                    {/*</tr>*/}
+                    {/*<tr>*/}
+                    {/*    <td colSpan="4"></td>*/}
+                    {/*    <td colSpan={2}><button>Оформить заказ</button></td>*/}
+                    {/*</tr>*/}
                 </table>
+                <div className={s.container2}>
+                    <h2>Итоговая сумма: <span>{getTotalSum()}</span><span>сом</span></h2>
+                    <Link to="/checkout"><button>Оформить заказ</button></Link>
+                </div>
             </div>
+
+
     );
     };
 

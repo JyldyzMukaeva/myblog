@@ -35,12 +35,26 @@
 .table tr:nth-child(1){
     background-color: lightpink;
 }
-button{
-    border-radius: 5px;
-    color: white;
-    letter-spacing: 2px;
-    font-weight: bold;
-    background-color: lightpink;
-    border: none;
-    padding: 10px;
+/*button{*/
+/*    border-radius: 5px;*/
+/*    color: white;*/
+/*    letter-spacing: 2px;*/
+/*    font-weight: bold;*/
+/*    background-color: lightpink;*/
+/*    border: none;*/
+/*    padding: 10px;*/
+/*}*/
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 80px;
+}
+
+.container2 button{
+    padding: 10px 15px;
+    background-color: darkorange;
+    border: 0;
+    font-size: 18px;
 }
